@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interest Computer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="bank.js" defer></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <div>Compoud Interest Calculator</div>
+      </header>
+      <main>
+        <form>
+          <div>Principal Amount ($)</div>
+          <input id="principal" />
+          <div>Period</div>
+          <select id="period">
+            <option value="360">daily</option>
+            <option value="12">monthly</option>
+            <option value="4">quarterly</option>
+            <option value="1">yearly</option>
+          </select>
+          <div>Interest Rate (%)</div>
+          <div>
+            <input
+              type="range"
+              id="apr"
+              min="0.25"
+              max="50"
+              value="2.5"
+              step="0.25"
+            />
+            <output id="aprText">2.5</output>
+          </div>
+          <div>Years</div>
+          <input id="years" />
+        </form>
+        <p>
+          Interest accumulated is: <output class="result" id="accumulated" />
+        </p>
+        <p>Total at end is: <output class="result" id="amount" /></p>
+        <img id="stocks" src="stocks.png" />
+      </main>
+      <footer>
+        <div>© 2024</div>
+        <div>
+          <a
+            href="https://codesandbox.io/p/sandbox/fast-silence-3pz3xd?file=%2Findex.html%3A51%2C15"
+            >Code</a
+          >
+        </div>
+      </footer>
+    </article>
+  </body>
+</html>
